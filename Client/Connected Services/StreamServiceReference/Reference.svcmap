@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="096c97ff-24cf-42f5-b23e-7421c093c584" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:10001/RSI_WCF_App_Stream" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RSI_WCF_App_Stream.xsd" MetadataType="Schema" ID="6b352e0f-d788-4c98-b1e3-00265f5bd500" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App_Stream?xsd=xsd1" />
+    <MetadataFile FileName="RSI_WCF_App_Stream.disco" MetadataType="Disco" ID="9de9b6d7-f330-455f-93e6-3fc0806f6471" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App_Stream?disco" />
+    <MetadataFile FileName="StreamContract.wsdl" MetadataType="Wsdl" ID="4368481d-9564-42a7-9e3d-23a9a1fc75aa" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App_Stream?wsdl" />
+    <MetadataFile FileName="RSI_WCF_App_Stream1.xsd" MetadataType="Schema" ID="3d6639bc-713a-4cab-8c4d-1e4aa9e057b7" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App_Stream?xsd=xsd0" />
+    <MetadataFile FileName="RSI_WCF_App_Stream2.xsd" MetadataType="Schema" ID="4b6fdf83-5f2c-4c5c-afd7-90bd18cfed63" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App_Stream?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

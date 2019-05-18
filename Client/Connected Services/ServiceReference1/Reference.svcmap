@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32a21a58-7726-43ac-82ac-030861651bbc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:10001/RSI_WCF_App" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RSI_WCF_App.disco" MetadataType="Disco" ID="dd6e1e55-4319-4fc7-94a7-fec973fdcfa3" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App?disco" />
+    <MetadataFile FileName="RSI_WCF_App.xsd" MetadataType="Schema" ID="fc24d104-707b-464a-9071-6523d84f3215" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App?xsd=xsd0" />
+    <MetadataFile FileName="PhoneContract.wsdl" MetadataType="Wsdl" ID="39ea8225-ad0e-4f3d-bd73-a17f1377ad8d" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App?wsdl" />
+    <MetadataFile FileName="RSI_WCF_App1.xsd" MetadataType="Schema" ID="d6a20875-fc53-4444-a62f-068e091b2ed9" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App?xsd=xsd1" />
+    <MetadataFile FileName="RSI_WCF_App2.xsd" MetadataType="Schema" ID="ea767738-6de6-40c8-81e5-84bdd1609d4c" SourceId="1" SourceUrl="http://localhost:10001/RSI_WCF_App?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

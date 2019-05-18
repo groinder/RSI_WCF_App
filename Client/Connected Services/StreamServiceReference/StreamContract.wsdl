@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StreamContract" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:10001/RSI_WCF_App_Stream?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:10001/RSI_WCF_App_Stream?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:10001/RSI_WCF_App_Stream?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestFileMessage">
+    <wsdl:part name="parameters" element="tns:RequestFileMessage" />
+  </wsdl:message>
+  <wsdl:message name="ResponseFileMessage">
+    <wsdl:part name="parameters" element="tns:ResponseFileMessage" />
+  </wsdl:message>
+  <wsdl:message name="ResponseFileMessage_Headers">
+    <wsdl:part name="name2" element="tns:name2" />
+    <wsdl:part name="size" element="tns:size" />
+  </wsdl:message>
+  <wsdl:portType name="IStreamContract">
+    <wsdl:operation name="getMStream">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStreamContract/getMStream" name="RequestFileMessage" message="tns:RequestFileMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStreamContract/getMStreamResponse" name="ResponseFileMessage" message="tns:ResponseFileMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setMStream">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStreamContract/setMStream" name="ResponseFileMessage" message="tns:ResponseFileMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStreamContract/setMStreamResponse" name="RequestFileMessage" message="tns:RequestFileMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStreamContract" type="tns:IStreamContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getMStream">
+      <soap:operation soapAction="http://tempuri.org/IStreamContract/getMStream" style="document" />
+      <wsdl:input name="RequestFileMessage">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ResponseFileMessage">
+        <soap:header message="tns:ResponseFileMessage_Headers" part="name2" use="literal" />
+        <soap:header message="tns:ResponseFileMessage_Headers" part="size" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMStream">
+      <soap:operation soapAction="http://tempuri.org/IStreamContract/setMStream" style="document" />
+      <wsdl:input name="ResponseFileMessage">
+        <soap:header message="tns:ResponseFileMessage_Headers" part="name2" use="literal" />
+        <soap:header message="tns:ResponseFileMessage_Headers" part="size" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RequestFileMessage">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StreamContract">
+    <wsdl:port name="BasicHttpBinding_IStreamContract" binding="tns:BasicHttpBinding_IStreamContract">
+      <soap:address location="http://localhost:10001/RSI_WCF_App_Stream/StreamContract" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
